@@ -13,8 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("v1/weather")
 public class WeatherController {
 
-    @Autowired
-    WeatherServices weatherServices;
+    WeatherServices weatherServices = new WeatherServices();
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getLocationById(@PathVariable("id") int id) {
